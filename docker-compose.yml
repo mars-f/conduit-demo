@@ -9,7 +9,7 @@ services:
 
   demo:
     build:
-      context: docker/vct-hg
+      context: docker/demo-shell
       dockerfile: ./Dockerfile
     volumes:
       - .:/home/phab/repo:ro
