@@ -17,6 +17,14 @@ services:
       - tinyproxy
       - phabricator.test
       - bmo.test
+      - hgserv
+
+  hgserv:
+    build:
+      context: docker/hgserv
+      dockerfile: ./Dockerfile
+    environment:
+      - HG_REPO=https://hg.mozilla.org/hgcustom/version-control-tools
 
   phabricator:
     image: mozilla/phabext
